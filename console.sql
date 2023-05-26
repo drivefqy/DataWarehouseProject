@@ -1351,6 +1351,8 @@ from dws_user_login
 group by uid,login_date
 ) t where date_add(login_date,7) = nd
 group by uid;
+
+--统计每台机器的消费
 create table ads_machine_income
 as
 select mid,sum(amount) from dws_machine_consume_1d
